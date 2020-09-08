@@ -42,18 +42,18 @@ public class Lab2 {
 	       //remove quotes from artist names
 	       Artist = Artist.replaceAll("\"", "");
 	       for(String art : Artist.split(",")){
-	           boolean found = false;
+	           boolean Index = false;
 
 	           //Count the number of times that the artist appear
 	           for(int i=0;i<NumOfArtist;i++){
 	               if(art.equalsIgnoreCase(artists[i])){
 	                   artistsCount[i]++;
-	                   found = true;
+	                   Index = true;
 	                   break;
 	               }
 	           }
 	         //count the number of artists that appear in the list
-	           if(!found){
+	           if(!Index){
 	               artists[NumOfArtist] = art;
 	               artistsCount[NumOfArtist]=1;
 	               NumOfArtist++;
